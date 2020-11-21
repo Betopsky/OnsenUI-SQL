@@ -1,0 +1,65 @@
+<ons-page>
+    <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button>
+            <i onclick="gallery()" class="zmdi zmdi-favorite" style="margin-top: 15px;"></i>
+          </ons-toolbar-button>
+        </div>
+  
+        <div style="text-align: center;" class="toolbar__center toolbar--material__center">
+            SQL
+        </div>
+  
+        <div class="right">
+          <ons-toolbar-button>
+            <i onclick="galleryV()" class="zmdi zmdi-favorite" style="margin-top: 15px;"></i>
+          </ons-toolbar-button>
+        </div>
+      </ons-toolbar>
+    <div style="text-align: center;height: 100%;">
+        <ons-list-header style="font-size: large;margin-bottom: 10px; text-align: center;">App de Notas</ons-list-header>
+        
+        <div id="notes" style="text-align: center;width: 100%;background-color: lavender;">
+        </div>
+
+        <div class="center1">
+            <div style="width: 80%; margin: center;">
+                <ons-button modifier="large" onclick="showCreateDialog()">Agregar Nota</ons-button>
+            </div>
+        </div>
+    </div>
+    <template id="dialog.html">
+        <ons-dialog id="my-dialog">
+            <div style="text-align: center; padding: 10px;">
+                <p>
+                    Editar Texto
+                </p>
+                <p id="editText">
+                    Solo es un mensaje normal!
+                </p>
+                <p>
+                    <ons-button onclick="editD('my-dialog')">Guardar</ons-button>
+                    <ons-button onclick="hideDialog('my-dialog')" style="background-color: orangered;">Cancelar
+                    </ons-button>
+                </p>
+            </div>
+        </ons-dialog>
+    </template>
+    <template id="dialogC.html">
+        <ons-dialog id="my-dialogC">
+            <div style="text-align: center; padding: 10px;">
+                <p>
+                    Nueva Nota
+                </p>
+                <p id="editTextC">
+                    Agrega tu texto aquí!
+                </p>
+                <p>
+                    <ons-button onclick="createD()">Guardar</ons-button>
+                    <ons-button onclick="hideDialogC('my-dialog')" style="background-color: orangered;">Cancelar
+                    </ons-button>
+                </p>
+            </div>
+        </ons-dialog>
+    </template>
+</ons-page>
